@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josesito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            /* Cambia el color de fondo por una imagen */
+            background-image: url('100_2087.JPG'); /* Asegúrate de cambiar 'fondo.jpg' por la ruta de tu imagen */
+            background-size: cover; /* La imagen cubre toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+         }
+         .container {
+         width: 90%; /* Usa un ancho dinámico */
+         max-width: 400px; /* Define un ancho máximo para evitar que se vea demasiado grande */
+         text-align: center;
+         background-color: white;
+          padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+         }
+         #content {
+            display: none;
+            padding-top: 20px;
+         }
+         input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid hsl(167, 96%, 46%);
+         }
+         button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+         /* Media Queries para pantallas más pequeñas */
+         @media (max-width: 768px) {
+    body {
+        background-size: auto;
+    }
+    .container {
+        padding: 15px;
+    }
+    input[type="password"], button {
+        width: 100%;
+    }
+         }
+          
+         </style>
+         </head>
+         <body>
+
+         <div class="container">
+         <h2>Josesito</h2>
+         <input type="password" id="password" placeholder="Ingresa la contraseña">
+         <br>
+         <button onclick="checkPassword()">Ingresar</button>
+         <div id="content">
+            <h3>Omg si pude</h3>
+            <p>QUE BUENO QUE SOY.</p>
+          </div>
+         </div>
+
+        <script>
+         function checkPassword() {
+            var password = document.getElementById('password').value;
+            var correctPassword = "Josesito"; // Cambia esto a la contraseña que quieras
+
+            if (password === correctPassword) {
+                document.querySelector('.container h2').style.display = 'none';  // Oculta el título de la contraseña
+                document.querySelector('input').style.display = 'none';  // Oculta el campo de contraseña
+                document.querySelector('button').style.display = 'none';  // Oculta el botón de entrar
+                document.getElementById('content').style.display = 'block';  
+            } else {
+                alert("Esa madre no es pendejo, pone la que si es .");
+            }
+         }
+    </script>
+
+</body>
+</html>
+</body>
+</html>
